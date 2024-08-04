@@ -16,7 +16,7 @@ CREATE TABLE songs (
 DROP TABLE IF EXISTS playlists;
 CREATE TABLE playlists (
   id SERIAL PRIMARY KEY,
-  name TEXT NOT NULL,
+  name TEXT NOT NULL UNIQUE,
   description TEXT,
   image TEXT,
   genre TEXT,

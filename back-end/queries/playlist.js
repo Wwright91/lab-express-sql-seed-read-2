@@ -9,4 +9,16 @@ const getAllPlaylists = async () => {
   }
 };
 
-module.exports = { getAllPlaylists };
+const getPlaylist = async (name) => {
+  try {
+    const playlist = await db.oneOrNone(
+      "SELECT * FROM playlists WHERE LOWER(name) = LOWER($1)",
+      name
+    );
+    return playlist;
+  } catch (error) {
+    throw error;
+  }
+};
+
+module.exports = { getAllPlaylists, getPlaylist };
