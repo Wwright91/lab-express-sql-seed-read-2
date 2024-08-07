@@ -1,8 +1,11 @@
 import React from 'react'
+import SongDetails from '../Components/SongDetails'
 
 const Show = () => {
   return (
-    <div>Show</div>
+    <div>Show
+      <SongDetails/>
+    </div>
   )
 }
 

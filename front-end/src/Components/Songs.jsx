@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
+import Song from "./Song";
 
 const API = import.meta.env.VITE_API_URL;
 
 const Songs = () => {
-
   const [songs, setSongs] = useState([]);
 
   useEffect(() => {
@@ -24,15 +24,7 @@ const Songs = () => {
     <div>
       Songs
       {songs.map((song) => {
-        return (
-          <div key={song.id}>
-            <h3>{song.name}</h3>
-            <h4>{song.artist}</h4>
-            <p>{song.album}</p>
-            <p>{song.time}</p>
-            <p>{song.is_favorite ? "fav" : "not fav"}</p>
-          </div>
-        );
+        return <Song song={song} key={song.id} />;
       })}
     </div>
   );
