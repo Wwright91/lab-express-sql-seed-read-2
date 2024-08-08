@@ -1,8 +1,11 @@
 import React from 'react'
+import SongEditForm from '../Components/SongEditForm'
 
 const Edit = () => {
   return (
-    <div>Edit</div>
+    <div>Edit
+      <SongEditForm/>
+    </div>
   )
 }
 

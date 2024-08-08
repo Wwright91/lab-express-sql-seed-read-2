@@ -4,6 +4,7 @@ import Song from "./Song";
 const API = import.meta.env.VITE_API_URL;
 
 const Songs = () => {
+
   const [songs, setSongs] = useState([]);
 
   useEffect(() => {
@@ -24,7 +25,9 @@ const Songs = () => {
     <div>
       Songs
       {songs.map((song) => {
-        return <Song song={song} key={song.id} />;
+        return (
+           <Song song={song} key={song.id}/>
+        );
       })}
     </div>
   );
